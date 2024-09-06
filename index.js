@@ -62,7 +62,7 @@ const userAgentGenerator = {
 
 const getToken = (query,randomUserAgent) =>
   new Promise((resolve, reject) => {
-    fetch("https://gateway.blum.codes/v1/auth/provider/PROVIDER_TELEGRAM_MINI_APP", {
+    fetch("https://user-domain.blum.codes/api/v1/auth/provider/PROVIDER_TELEGRAM_MINI_APP", {
       headers: {
         "accept": "application/json, text/plain, */*",
         "accept-language": "en-US,en;q=0.9,id;q=0.8",
