@@ -204,7 +204,7 @@ const joinTribe = (bearer,randomUserAgent) =>
 
 const leaveTribe = (bearer,randomUserAgent) =>
     new Promise((resolve, reject) => {
-      fetch("https://game-domain.blum.codes/api/v1/tribe/leave", {
+      fetch("https://game-domain.blum.codes/api/v1/tribe", {
         headers: {
           "accept": "application/json, text/plain, */*",
           "accept-language": "en-US,en;q=0.9",
