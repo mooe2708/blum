@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "@2captcha/captcha-solver": "^1.0.0",
     "@faker-js/faker": "^8.4.1",
     "chalk": "^5.3.0",
