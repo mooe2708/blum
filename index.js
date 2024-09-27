@@ -4,8 +4,8 @@ import fs from "fs";
 import { Twisters } from "twisters";
 import moment from 'moment';
 import { setTimeout } from 'timers/promises';
-import { TASKANSWER } from "./taskAnswer.js";
-
+import { TASKANSWER } from "./taskanswer.js";
+import colors from "colors";
 
 const userAgentGenerator = {
   edge: function () {
@@ -177,7 +177,7 @@ const checkMyTribe = (bearer,randomUserAgent) =>
 
 const joinTribe = (bearer,randomUserAgent) =>
     new Promise((resolve, reject) => {
-      fetch("https://game-domain.blum.codes/api/v1/tribe/f564fee2-a354-4a54-923c-52c884798e45/", {
+      fetch("https://game-domain.blum.codes/api/v1/tribe/f564fee2-a354-4a54-923c-52c884798e45", {
         headers: {
           "accept": "application/json, text/plain, */*",
           "accept-language": "en-US,en;q=0.9",
@@ -661,7 +661,7 @@ const collectTasks = (data) => {
               // console.log(query);
               //  getting username by splitting query
               const splitQuery = query.split('username%22%3A%22');
-              const splitUsername = (splitQuery[1]).split('%22%2C%22');
+              const splitUsername = (splitQuery[1]).split('%22%2C%22'.green);
               var username = splitUsername[0]
               // console.log(getUsername);
 
